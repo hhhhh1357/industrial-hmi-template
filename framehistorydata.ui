@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrameHistoryData</class>
+ <widget class="QFrame" name="FrameHistoryData">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>690</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1280</width>
+    <height>690</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1280</width>
+    <height>690</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #0D1D4D;</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>5</y>
+     <width>1261</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox
+{
+   background-color: transparent;   
+   border:  0px solid;
+   border-color:#888888;
+}</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>20</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+background-color: transparent;
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>监测因子：</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>27</y>
+      <width>381</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>300</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>400</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #0D1D4D;
+color:white;</string>
+    </property>
+    <widget class="QComboBox" name="factor">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>-17</y>
+       <width>371</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox{
+     background: #0D1D4D;
+     border: 0px solid gray;
+     padding: 1px 2px 1px 2px;    
+     color: white;  
+     selection-background-color: #005aa7;
+}
+QComboBox::drop-down{
+    background-color: transparent;
+    subcontrol-origin: padding;
+    subcontrol-position:top right;
+    width:60px;
+    border-left-width:0px; 
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+}
+QComboBox  QAbstractItemView{
+    background-color: blue;
+    border-radius:3px !important;    
+}
+QComboBox  QAbstractItemView::item{
+    height:30px;    
+}
+
+QComboBox{
+   background: #0D1D4D;
+   color: white;
+}
+
+
+
+</string>
+     </property>
+     <property name="currentText">
+      <string>请选择监测因子</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>请选择监测因子</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QDateTimeEdit" name="timeStart">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>17</y>
+      <width>391</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+/*spinbox 抬起样式*/
+QDateTimeEdit::up-button,QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
+    subcontrol-position:right;
+    image: url(:/Images/add_y_32.png);
+    width: 60px;
+    height: 60px;
+}
+QDateTimeEdit::down-button,QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
+    subcontrol-position:left;
+    image: url(:/Images/reduce_y_32.png);
+    width: 60px;
+    height: 60px;
+}
+
+QDateTimeEdit{
+background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+background-color: transparent;
+color:white;
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="currentSection">
+     <enum>QDateTimeEdit::YearSection</enum>
+    </property>
+    <property name="displayFormat">
+     <string>yyyy-MM-dd hh:mm:ss</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>90</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+background-color: transparent;
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>数据类型：</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbDataMinute">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>94</y>
+      <width>101</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-radius:13px;
+      border-width:2px;    
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+
+      border:                 2px solid white;
+      border-radius:          13px; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      orange;
+      border:                 2px solid white;
+      border-radius:          13px; 
+}
+ 
+QRadioButton{
+     background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+     background-color: transparent;
+     color:white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>分钟</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QRadioButton" name="rbDataHour">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>94</y>
+      <width>101</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-radius:13px;
+      border-width:2px;    
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+
+      border:                 2px solid white;
+      border-radius:          13px; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      orange;
+      border:                 2px solid white;
+      border-radius:          13px; 
+}
+ 
+QRadioButton{
+     background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+     background-color: transparent;
+     color:white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>小时</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>583</x>
+      <y>20</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+background-color: transparent;
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>起始时间：</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>583</x>
+      <y>90</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+background-color: transparent;
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>终止时间：</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="timeEnd">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>86</y>
+      <width>391</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+/*spinbox 抬起样式*/
+QDateTimeEdit::up-button,QTimeEdit::up-button,QDoubleSpinBox::up-button,QSpinBox::up-button {subcontrol-origin:border;
+    subcontrol-position:right;
+    image: url(:/Images/add_y_32.png);
+    width: 60px;
+    height: 60px;
+}
+QDateTimeEdit::down-button,QTimeEdit::down-button,QDoubleSpinBox::down-button,QSpinBox::down-button {subcontrol-origin:border;
+    subcontrol-position:left;
+    image: url(:/Images/reduce_y_32.png);
+    width: 60px;
+    height: 60px;
+}
+
+QDateTimeEdit{
+background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+background-color: transparent;
+color:white;
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="keyboardTracking">
+     <bool>false</bool>
+    </property>
+    <property name="currentSection">
+     <enum>QDateTimeEdit::YearSection</enum>
+    </property>
+    <property name="displayFormat">
+     <string>yyyy-MM-dd hh:mm:ss</string>
+    </property>
+    <property name="calendarPopup">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="btnQuery">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>30</y>
+      <width>90</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>90</width>
+      <height>90</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>90</width>
+      <height>90</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+border-image: url(:/Images/ser.png);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="toolButtonStyle">
+     <enum>Qt::ToolButtonTextUnderIcon</enum>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbDataReal">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>94</y>
+      <width>101</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-radius:13px;
+      border-width:2px;    
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+
+      border:                 2px solid white;
+      border-radius:          13px; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      orange;
+      border:                 2px solid white;
+      border-radius:          13px; 
+}
+ 
+QRadioButton{
+     background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+     background-color: transparent;
+     color:white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>实时</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QRadioButton" name="rbDataDay">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>94</y>
+      <width>101</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-radius:13px;
+      border-width:2px;    
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+
+      border:                 2px solid white;
+      border-radius:          13px; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      orange;
+      border:                 2px solid white;
+      border-radius:          13px; 
+}
+ 
+QRadioButton{
+     background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+     background-color: transparent;
+     color:white;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>日</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>805</x>
+     <y>170</y>
+     <width>351</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="lineWidth">
+    <number>1</number>
+   </property>
+   <property name="midLineWidth">
+    <number>1</number>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <property name="showGrid">
+    <bool>false</bool>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::DashLine</enum>
+   </property>
+   <property name="cornerButtonEnabled">
+    <bool>false</bool>
+   </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderHighlightSections">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QFrame" name="frameDiagram">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>771</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="btnPageUp">
+   <property name="geometry">
+    <rect>
+     <x>1184</x>
+     <y>392</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+border-image: url(:/Images/ReRec.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="btnPageDown">
+   <property name="geometry">
+    <rect>
+     <x>1184</x>
+     <y>594</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+border-image: url(:/Images/Rec3.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="btnUp">
+   <property name="geometry">
+    <rect>
+     <x>1184</x>
+     <y>461</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+border-image: url(:/Images/Rec4.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="btnDown">
+   <property name="geometry">
+    <rect>
+     <x>1184</x>
+     <y>529</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+border-image: url(:/Images/Rec2.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="btnSaveUSB">
+   <property name="geometry">
+    <rect>
+     <x>1184</x>
+     <y>201</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+border-image: url(:/Images/SaveUSB.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="btnSaveSD">
+   <property name="geometry">
+    <rect>
+     <x>1184</x>
+     <y>270</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: radial-gradient(circle, #10215C 0%, #070F29 100%);
+border-image: url(:/Images/SaveSD.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>

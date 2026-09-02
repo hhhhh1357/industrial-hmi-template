@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogSetupAiCheck</class>
+ <widget class="QDialog" name="DialogSetupAiCheck">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>949</width>
+    <height>394</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>951</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: black;
+background-color:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #20A5F5, stop:1 #FFFFFF);</string>
+   </property>
+   <property name="text">
+    <string>模拟量校准</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>70</y>
+     <width>951</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="hLayoutMain_2" stretch="1,0">
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="frameParaments_2">
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;color:white;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QWidget" name="layoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>771</width>
+           <height>288</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4" rowstretch="1,0,0,0" columnstretch="0,0,0,0">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_11">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: transparent;color:white;
+color: black;</string>
+            </property>
+            <property name="text">
+             <string>模拟量通道：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_23">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>64</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
+color: black;</string>
+              </property>
+              <property name="text">
+               <string>电流</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_24">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: transparent;
+color: black;</string>
+            </property>
+            <property name="text">
+             <string>电流转换值(A)：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_22">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: transparent;
+color: black;</string>
+            </property>
+            <property name="text">
+             <string>校准信号类型：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+           </layout>
+          </item>
+          <item row="3" column="3">
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="dataReadADC">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>64</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>64</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
+color:black;
+border-width:0;
+border-style:outset;
+border-bottom:2px solid #80d0c7;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Normal</enum>
+              </property>
+              <property name="readOnly">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="3">
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="rbPort1_2">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-width:2px; 
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      blue;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+ 
+QRadioButton{
+background-color: transparent;
+color:black;
+}</string>
+              </property>
+              <property name="text">
+               <string>A1</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rbPort2_2">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-width:2px; 
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      blue;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+ 
+QRadioButton{
+background-color: transparent;
+color:black;
+}</string>
+              </property>
+              <property name="text">
+               <string>A2</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rbPort3_2">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-width:2px; 
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      blue;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+ 
+QRadioButton{
+background-color: transparent;
+color:black;
+}</string>
+              </property>
+              <property name="text">
+               <string>A3</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rbPort4_2">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-width:2px; 
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      blue;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+ 
+QRadioButton{
+background-color: transparent;
+color:black;
+}</string>
+              </property>
+              <property name="text">
+               <string>A4</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rbPort5_2">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-width:2px; 
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      blue;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+ 
+QRadioButton{
+background-color: transparent;
+color:black;
+}</string>
+              </property>
+              <property name="text">
+               <string>A5</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rbPort6_2">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-width:2px; 
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      blue;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+ 
+QRadioButton{
+background-color: transparent;
+color:black;
+}</string>
+              </property>
+              <property name="text">
+               <string>A6</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rbPort7_2">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-width:2px; 
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      blue;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+ 
+QRadioButton{
+background-color: transparent;
+color:black;
+}</string>
+              </property>
+              <property name="text">
+               <string>A7</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rbPort8_2">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QRadioButton::indicator {
+      width: 24px;
+      height: 24px;
+      border-width:2px; 
+}
+
+QRadioButton::indicator::unchecked {   
+      background-color:       transparent;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+
+QRadioButton::indicator::checked {    
+      background-color:      blue;
+      border:                 2px solid black;
+      border-radius:          13px !important; 
+}
+ 
+QRadioButton{
+background-color: transparent;
+color:black;
+}</string>
+              </property>
+              <property name="text">
+               <string>A8</string>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">buttonGroup_2</string>
+              </attribute>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>790</x>
+           <y>0</y>
+           <width>134</width>
+           <height>301</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <property name="leftMargin">
+           <number>5</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QToolButton" name="btnRead">
+            <property name="minimumSize">
+             <size>
+              <width>128</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: rgba(255,255,255,0);
+color: black;</string>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/Images/recive1.png</normaloff>:/Images/recive1.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>64</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextUnderIcon</enum>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="btnClose">
+            <property name="minimumSize">
+             <size>
+              <width>128</width>
+              <height>90</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: rgba(255,255,255,0);
+color: black;</string>
+            </property>
+            <property name="text">
+             <string>关闭</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/Images/Out1.png</normaloff>:/Images/Out1.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>64</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextUnderIcon</enum>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_7">
+      <property name="minimumSize">
+       <size>
+        <width>1</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #fffde4;
+color:white;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup_2"/>
+ </buttongroups>
+</ui>

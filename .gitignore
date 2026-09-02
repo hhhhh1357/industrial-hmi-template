@@ -1,0 +1,28 @@
+# ---------- 编译产物（不入库） ----------
+*.o
+*.obj
+*.a
+*.so
+Makefile
+Makefile.*
+.qmake.stash
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+UI/
+build-*/
+industrial-hmi-template          # 可执行文件
+
+# ---------- Qt Creator 用户配置 ----------
+*.pro.user
+*.pro.user.*
+
+# ---------- 数据库 / 运行时数据 ----------
+*.db
+TalkerHistoryDB*
+*.db-journal
+
+# ---------- 临时 / 系统文件 ----------
+*~
+.DS_Store
+*.swp
